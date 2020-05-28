@@ -46,7 +46,7 @@
    - name: create a instance
      gcp_compute_instance:
          state: present
-         name: "{{ VM_name }}"
+         name: "{{ vm_name }}"
          machine_type: n1-standard-1
          disks:
            - auto_delete: true
@@ -71,7 +71,7 @@
    - debug:
        msg: "GCP VM  successfully provisioned!"
    - debug:
-       var: hostvars[ "{{ VM_name }}"]
+       var: hostvars[ "{{ vm_name }}"]
  #  - name: get info on an instance
  #    gcp_compute_instance_info:
  #      filters:
