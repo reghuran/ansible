@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        echo 'Test'
+        mail(subject: 'test', body: 'test')
       }
     }
 
