@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        mail(subject: 'test', body: 'test')
+        mail(subject: 'test', body: 'test', to: 'reghuran@gmail.com', from: 'ustmaya')
       }
     }
 
